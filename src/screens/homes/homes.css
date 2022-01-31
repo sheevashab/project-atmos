@@ -1,0 +1,33 @@
+.home-list {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.home-card {
+  border: 4px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 25vw;
+}
+
+.home-image {
+  width: 20vw;
+}
+
+h3,
+h4 {
+  color: grey;
+}
+
+h4 {
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+p {
+  text-align: left;
+}

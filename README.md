@@ -1,6 +1,6 @@
 # Project Atmos
 
-This project was created with React and CSS.
+This project was created with React/Redux and styled with CSS.
 
 ## Deployment
 
