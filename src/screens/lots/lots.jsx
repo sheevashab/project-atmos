@@ -1,4 +1,5 @@
 import "./Lots.css";
+import Layout from "../../components/Layout/Layout";
 import { Component } from "react";
 import { connect } from "react-redux";
 
@@ -21,9 +22,11 @@ class Lots extends Component {
     );
 
     return (
-      <div className="lot-list">
-        <div className="lot-card">{lotsList}</div>
-      </div>
+      <Layout>
+        <div className="lot-list">
+          <div className="lot-card">{lotsList}</div>
+        </div>
+      </Layout>
     );
   }
 }

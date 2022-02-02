@@ -1,19 +1,23 @@
-// import "./SideBar.css";
-// import { NavLink } from "react-router-dom";
+import "./SideBar.css";
+import { Link } from "react-router-dom";
 
-// export default function SideBar() {
-//   return (
-//     <nav>
-//       <div>
-//         <ul>
-//           <li>
-//             <NavLink to="/homeplans">Home Plans</NavLink>
-//           </li>
-//           <li>
-//             <NavLink to="/lots">Lots</NavLink>
-//           </li>
-//         </ul>
-//       </div>
-//     </nav>
-//   );
-// }
+const SideBar = () => {
+  return (
+    <nav>
+      <ul className="side-bar-list">
+        <li className="side-bar-item">
+          <Link to="/homeplans" className="side-bar-item">
+            Home Plans
+          </Link>
+        </li>
+        <li className="side-bar-item">
+          <Link to="/lots" className="side-bar-item">
+            Lots
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default SideBar;

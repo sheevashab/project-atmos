@@ -1,0 +1,38 @@
+nav {
+  border-right: 2px solid black;
+  display: flex;
+  flex: 0 0 100px;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 10px;
+  text-align: left;
+  z-index: 1;
+}
+
+.side-bar-item {
+  color: black;
+  list-style: none;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.side-bar-item:active {
+  color: red;
+}
+
+/* .side-bar-item:visited {
+  color: green;
+} */
+
+.side-bar-list {
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+  width: 15vw;
+}
+
+@media screen and (max-width: 450px) {
+  .side-bar-list {
+    font-size: 12px;
+  }
+}

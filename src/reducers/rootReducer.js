@@ -79,6 +79,20 @@ const initState = {
       image: "https://storage.googleapis.com/plot_images/1030870481",
     },
   ],
+  combinations: [
+    { homePlanId: 1, lotId: 1 },
+    { homePlanId: 1, lotId: 2 },
+    { homePlanId: 1, lotId: 3 },
+    { homePlanId: 2, lotId: 1 },
+    { homePlanId: 2, lotId: 4 },
+    { homePlanId: 2, lotId: 3 },
+    { homePlanId: 3, lotId: 3 },
+    { homePlanId: 3, lotId: 2 },
+    { homePlanId: 3, lotId: 1 },
+    { homePlanId: 4, lotId: 3 },
+    { homePlanId: 4, lotId: 2 },
+    { homePlanId: 4, lotId: 4 },
+  ],
 };
 
 const rootReducer = (state = initState, action) => {

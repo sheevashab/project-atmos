@@ -1,4 +1,5 @@
 import "./HomePlans.css";
+import Layout from "../../components/Layout/Layout";
 import { Component } from "react";
 import { connect } from "react-redux";
 
@@ -29,9 +30,11 @@ class HomePlans extends Component {
     );
 
     return (
-      <div className="home-list">
-        <div className="home-card">{homePlansList}</div>
-      </div>
+      <Layout>
+        <div className="home-list">
+          <div className="home-card">{homePlansList}</div>
+        </div>
+      </Layout>
     );
   }
 }
