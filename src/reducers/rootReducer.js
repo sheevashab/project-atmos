@@ -1,8 +1,5 @@
-import { useState } from "react";
-import "./Homes.css";
-
-export default function Homes() {
-  const [homes, setHomes] = useState([
+const initState = {
+  homePlans: [
     {
       homePlanId: 1,
       name: "The Medita",
@@ -42,28 +39,50 @@ export default function Homes() {
       numBeds: 3,
       numBaths: 2,
       sqft: 2300,
-      tags: [], // Intentionally left empty :)
+      tags: [],
       description:
         "The Altastone is an adobe-inspired home designed with the dry desert in mind. Its unique architecture will keep the home cool during the day while providing plenty of natural light.\n\nThe plan comes with a single layout with an optional patio.",
       image: "https://storage.googleapis.com/home_plan_images/0837w_0.jpg",
     },
-  ]);
+  ],
+  lots: [
+    {
+      lotId: 1,
+      address: "123 Example Ln, Charlotte, NC",
+      acres: 1.6,
+      description:
+        "This sprawling lot is located on the outskirts of Charlotte, with nearby boat access to Example Lake and a straight shot to downtown Charlotte via Example Highway.",
+      image: "https://storage.googleapis.com/plot_images/1018314458",
+    },
+    {
+      lotId: 2,
+      address: "123 Sample Ln, Raleigh, NC",
+      acres: 0.7,
+      description:
+        "This spacious lot is in the gorgeous Example Neighborhood, surrounded by historic landmarks such as The Cool Things Museum and The Very Old House.",
+      image: "https://storage.googleapis.com/plot_images/1018937216",
+    },
+    {
+      lotId: 3,
+      address: "123 Test Ct, Charlotte, NC",
+      acres: 0.28,
+      description:
+        "This cozy lot is directly next to downtown Charlotte - from your front yard you can walk to uptown. Be sure to check out The Average Bowling Alley or one of the plenty of restaurants nearby!",
+      image: "https://storage.googleapis.com/plot_images/1043665691",
+    },
+    {
+      lotId: 4,
+      address: "123 Far Far Away St, Nowhere, NC",
+      acres: 9.15,
+      description:
+        "This gigantic lot is far from any major population center - in fact, you’ll probably never meet a single person out here! If you’re looking for solitude at a bargain, this is the perfect place for you. There’s absolutely nothing around except nature.",
+      image: "https://storage.googleapis.com/plot_images/1030870481",
+    },
+  ],
+};
 
-  return (
-    <div className="home-list">
-      <div className="home-card">
-        {homes.map((home) => (
-          <div key={home.homePlanId}>
-            <img src={home.image} alt="house exterior" className="home-image" />
-            <h2>{home.name}</h2>
-            <h3>
-              {home.numBeds} beds - {home.numBaths} baths - {home.sqft} sqft
-            </h3>
-            <h4>{home.tags}</h4>
-            <p>{home.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+const rootReducer = (state = initState, action) => {
+  return state;
+};
+
+export default rootReducer;
