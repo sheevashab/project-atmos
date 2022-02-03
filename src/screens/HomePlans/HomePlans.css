@@ -4,6 +4,11 @@ button {
   padding: 0px;
 }
 
+.button-save {
+  background-color: transparent;
+  font-size: 20px;
+}
+
 .button-show {
   background-color: white;
   border: 2px solid black;
