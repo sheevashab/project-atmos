@@ -53,8 +53,11 @@ export const homePlanSlice = createSlice({
     },
   ],
   reducers: {
-    toggleSaved: (state) => {
-      state.saved = !state.saved;
+    toggleSaved: (state, action) => {
+      const index = state.findIndex(
+        (homePlan) => homePlan.homePlanId === action.payload.homePlanId
+      );
+      state[index].saved = action.payload.saved;
     },
   },
 });
