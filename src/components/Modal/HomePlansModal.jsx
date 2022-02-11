@@ -1,6 +1,17 @@
 import "./Modal.css";
+import HomePlanCard from "../../components/Cards/HomePlanCard";
+import { useSelector } from "react-redux";
 
 function HomePlansModal({ setOpenModal }) {
+  const homePlans = useSelector((state) => state.homePlans);
+  const homePlanId = useSelector((state) => homePlans.homePlanId);
+
+  const combinations = useSelector((state) => state.combinations);
+  const combinationId = useSelector((state) => combinations.homePlanId);
+
+  const lots = useSelector((state) => state.lots);
+  const lotId = useSelector((state) => lots.lotId);
+
   return (
     <div className="modal-background">
       <div className="modal-container">
@@ -12,8 +23,15 @@ function HomePlansModal({ setOpenModal }) {
         >
           x
         </button>
-        <div className="modal-combinations">
-          Here is the list of matching combinations
+        <div className="modal-list">
+          Compatible Lots:
+          {homePlans
+            .filter((homePlan) => homePlanId === combinationId)
+            .map((lot) => (
+              <li key={combinations.homePlanId} className="modal-item">
+                {lot.lotId}
+              </li>
+            ))}
         </div>
       </div>
     </div>
