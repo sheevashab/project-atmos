@@ -56,24 +56,12 @@ export const homePlanSlice = createSlice({
   initialState: INITIAL_STATE,
   reducers: {
     toggleSaved: (state, action) => {
-      // const index = state.findIndex(
-      //   (homePlan) => homePlan.homePlanId === action.payload.homePlanId
-      // );
-      // state[index].saved = action.payload;
-      state.homePlans.save = action.payload;
+      const index = state.findIndex(
+        (homePlan) => homePlan.homePlanId === action.payload.homePlanId
+      );
+      state[index].saved = action.payload;
+      console.log(JSON.stringify(state));
     },
-    //   toggleSaved: (state, action) => {
-    //     const { index } = action.payload;
-    //     return state.map((homePlan, i) => {
-    //       if (i !== index) return homePlan;
-
-    //       toggleSaved: (state, action) => {
-    //return {
-    //         ...homePlan,
-    //         saved: !homePlan.saved,
-    //       };
-    //     });
-    //   },
   },
 });
 

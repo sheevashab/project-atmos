@@ -3,15 +3,15 @@ import { useSelector } from "react-redux";
 
 function ShowSavedHomes() {
   const homePlans = useSelector((state) => state.homePlans);
-  const saved = useSelector(() => homePlans.saved);
+  const saved = useSelector((state) => state.homePlans.saved);
 
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   homePlans.filter((homePlan) => (
-  //     //if saved == true, show HomePlanCard
-  //   ))
-  // };
-  //filter logic
+  const handleClick = (e) => {
+    e.preventDefault();
+    // homePlans.filter((homePlan) => (
+
+    //     //if saved == true, show HomePlanCard
+    //   ))
+  };
   //onClick show only objects where state of saved === true
   //need to access Redux for "saved" key and its value
 

@@ -26,6 +26,9 @@ function HomePlansModal({ setOpenModal }) {
         <div className="modal-list">
           Compatible Lots:
           {homePlans
+            //map through home plans
+            //condition - if homePlans.homePlanId === cominations.homePlanId
+            //return lot card on modal view
             .filter((homePlan) => homePlanId === combinationId)
             .map((lot) => (
               <li key={combinations.homePlanId} className="modal-item">
